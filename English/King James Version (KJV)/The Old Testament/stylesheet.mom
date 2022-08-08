@@ -1,0 +1,125 @@
+.
+.\"
+.\" Public Domain
+.\" Everyone is permitted to copy, modify and distribute copies of this document
+.\" for free as long as it's Biblical content remains unchanged.
+.\"
+.
+.\" If you are not familiar with mom, you can get information/answers for any topic/question
+.\" conserning mom that's tinkering your mind at https://www.schaffter.ca/mom/
+.\" If you want to change anything in this document, please refer first to the documentation
+.\" of mom, then make the changes.
+.
+.\" Before generating any pdf document,
+.\" make sure to have the latest version of groff and mom.
+.\" Current Version of groff:
+.\"     1.22.4 for more information on how to download it, visit: https://www.gnu.org/software/groff/
+.\" Current Version of mom:
+.\"     2.5_b available at https://www.schaffter.ca/mom/mom-05.html with intruction on how to patch mom.
+.\" NOTE:
+.\" You need to patch mom manually (Read the INSTALL file shipped with the tarball),
+.\" because mom is being developed independendtly of groff.
+.\" Please read: https://www.schaffter.ca/mom/mom-05.html#place
+.
+.\" Page setup
+.\" The page setup macros establish the physical dimensions of your page and the margins you want it to have.
+.\" Available macros:
+.\"     - PAGEWIDTH
+.\"     - PAGELENGTH
+.\"     - PAPER
+.\"     - L_MARGIN
+.\"     - R_MARGIN
+.\"     - T_MARGIN
+.\"     - B_MARGIN
+.\"     - PAGE
+.\" For more information regarding on how to use these macros, read: https://www.schaffter.ca/mom/momdoc/typesetting.html#page-setup-intro
+.\"
+.\" Here we are using the PAPER macro to set the physical dimensions to A5.
+.\" Read: https://www.schaffter.ca/mom/momdoc/typesetting.html#paper
+.PAPER A5
+.\"
+.PRINTSTYLE TYPESET \" Do not change
+.DOCTYPE DEFAULT \" Do not change
+.\"
+.NEWCOLOR gray GRAY #50 \" Defining a color, read: https://www.schaffter.ca/mom/momdoc/color.html#newcolor
+.PDF_LINK_COLOR gray \" Setting pdf links' color to gray defined above.
+.\"
+.\" Setting the margins and the point size and the autolead.
+.\" Make sure to have them below the PRINTSTYLE macro.
+.T_MARGIN .75i
+.B_MARGIN .75i
+.L_MARGIN .45i
+.R_MARGIN .45i
+.PT_SIZE 9
+.AUTOLEAD 2
+.\" Setting the title of the document and creating the document cover.
+.DOCTITLE "king" "James" "Version"
+.DOC_COVER DOCTITLE
+.\" Styling DOCTITLE.
+.DOC_COVER_TITLE_FONT BI
+.DOC_COVER_TITLE_SIZE +70
+.DOC_COVER_TITLE_COLOR gray
+.DOC_COVER_LEAD +52
+.\"
+.PDF_TITLE "King James Version" \" Do not change
+.\" Copyright Page
+.DOCHEADER off 1i \" Do not change
+.PAGINATION off \" Unless you know what you are doing, do not change the PAGINATION macro later in this document.
+.TITLE "Copyright" \" Do not change
+.NO_TOC_ENTRY
+.START
+.PP
+\f[B]Public Domain\f[]
+.BR
+Everyone is permitted to copy, modify and distribute copies of this document for free as long as it's Biblical content remains unchanged.
+.TOC_AFTER_HERE \" Telling mom where to place the table of contents.
+.COLLATE
+.\" Setting the title and creating the title cover.
+.TITLE COVER "The" "Old" "Testament"
+.TITLE "The Old Testament"
+.COVER TITLE
+.\" Styling TITLE COVER.
+.COVER_TITLE_FONT BI
+.COVER_TITLE_SIZE +50
+.COVER_TITLE_LEAD +35
+.COVER_TITLE_COLOR gray
+.\" Styling TITLE.
+.TITLE_FONT BI
+.TITLE_SIZE +15
+.TITLE_COLOR gray
+.\" Changing the right/center parts of the header, read: https://www.schaffter.ca/mom/momdoc/headfootpage.html
+.HEADER_RIGHT \E*[$TITLE]
+.HEADER_CENTER #
+.\" Styling the left header
+.HEADER_MARGIN .4i
+.HEADER_RIGHT_FONT I
+.HEADER_CENTER_FONT B
+.HEADER_LEFT_FONT BI
+.HEADER_RIGHT_CAPS off
+.\" Styling HEADING 1 and 2 levels.
+.HEADING_STYLE 1 \
+    FONT BI \
+    COLOR gray \
+    SIZE +10
+.HEADING_STYLE 2 \
+    FONT BI \
+    COLOR gray \
+    SIZE +5 \
+    NEEDS 2
+.\" Styling DROPCAP
+.DROPCAP_COLOR gray
+.DROPCAP_FONT B
+.\"
+.RECTO_VERSO
+.FORCE_RECTO
+.\"
+.SPACE_TOC_ITEMS
+.TOC_HEADER_STRING "Contents in Details"
+.\"
+.DOCHEADER
+.\".PAGINATE \" To re-enable pagination if you wan the number of the page to appear at the bottom.
+.\" You need first to change '.HEADER_CENTER #' to '.HEADER_CENTER ""'.
+.PAGENUMBER 1
+.COLUMNS 2 0.2i \" Setting up columns for the whole document, read: https://www.schaffter.ca/mom/momdoc/docprocessing.html#columns
+.\"
+.START
