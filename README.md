@@ -10,6 +10,8 @@
     <a href="https://github.com/0xR3V/Bibles#a-list-of-all-the-bibles">A List of All the Bibles</a>
     -
     <a href="https://github.com/0xR3V/Bibles#why-groff-mom">Why Groff-mom?</a>
+    -
+    <a href="https://github.com/0xR3V/Bibles#contact-me">Contact Me</a>
 </div>
 
 # Introduction
@@ -55,7 +57,7 @@ However, before making any changes, consult first mom's documentation. More info
 
 # A List of All the Bibles
 - [ ] العربية (Arabic) (AR)
-	- [ ] الكتاب المقدس - فان دايك(SVD)
+	- [ ] الكتاب المقدس - فان دايك (SVD)
 - [ ] English (EN)
 	- [ ] American King James Version (AKJV)
 	- [ ] American Standard Version (ASV)
@@ -74,3 +76,13 @@ More bible versions/languages will be added in the future.
 
 # Why Groff-mom?
 I chose [Groff](https://www.gnu.org/software/groff/) because it's installation is minimal, and [mom](https://www.schaffter.ca/mom/mom-01.html) provides an easy way to style a document.
+
+# Contact Me
+Please contact me or open an issue if you have any concerns or suggestions.
+- Email: `r3veal@protonmail.ch`
+
+<div align="right">
+<p>
+	<strong>...All The Glory To God.</strong>
+</p>
+</div>
