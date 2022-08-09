@@ -114,7 +114,9 @@ Everyone is permitted to copy, modify and distribute copies of this document for
 .FORCE_RECTO
 .\"
 .SPACE_TOC_ITEMS
-.TOC_HEADER_STRING "Contents in Details"
+.TOC_HEADER_STRING "Table of Contents"
+.\"
+.SMARTQUOTES
 .\"
 .DOCHEADER
 .\".PAGINATE \" To re-enable pagination if you wan the number of the page to appear at the bottom.
