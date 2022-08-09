@@ -83,7 +83,7 @@ However, before making any changes, consult first mom's documentation. More info
 	- [ ] Reina-Valera Antigua (RVA)
 	- [ ] Versión Biblia Libre
 - [ ] Français (French) (FR)
-	- [ ] La Sainte Bible
+	- [x] La Sainte Bible
 	- [ ] Louis Segond (LSG)
 
 More bible versions/languages will be added in the future.
