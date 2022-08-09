@@ -2,7 +2,7 @@
 The PDF file is created with the command `pdfmom,` which requires the most recent versions of `groff` and `mom`.
 
 ```shell
-pdfmom -k La_Sainte_Bible-l'ancien-testament.mom > La_Sainte_Bible-l'ancien-testament.pdf
+pdfmom -k La_Sainte_Bible-l\'ancien-testament.mom > La_Sainte_Bible-l\'ancien-testament.pdf
 ```
 
 ### SHA256 checksums for the files
