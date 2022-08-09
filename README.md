@@ -59,11 +59,26 @@ However, before making any changes, consult first mom's documentation. More info
 - [ ] العربية (Arabic) (AR)
 	- [ ] الكتاب المقدس - فان دايك (SVD)
 - [ ] English (EN)
+	- [ ] A Conservative Version (ACV)
+	- [ ] Aionian Bible
 	- [ ] American King James Version (AKJV)
 	- [ ] American Standard Version (ASV)
 	- [x] Bible in Basic English (BBE)
+	- [ ] Darby Translation (DARBY)
+	- [ ] Douay-Rheims 1899 American Edition (DRA)
+	- [ ] Geneva Bible 1599
 	- [x] King James Version (KJV)
+	- [ ] Montgomery New Testament (MNT)
+	- [ ] Revised King James New Testament (RKJNT)
+	- [ ] The Emphasized Bible by J. B. Rotherham (Rotherham)
+	- [ ] The Living Oracles NT (TLO)
+	- [ ] Twentieth Century New Testament (TCNT)
+	- [ ] Updated King James Version (UKJV)
 	- [ ] Webster Bible
+	- [ ] Weymouth NT 1912 (Weymouth)
+	- [ ] World English Bible (WEB)
+	- [ ] World Messianic Bible
+	- [ ] Young's Literal Translation (YLT)
 - [ ] Español (Spanish) (ES)
 	- [ ] Reina-Valera Antigua (RVA)
 	- [ ] Versión Biblia Libre
