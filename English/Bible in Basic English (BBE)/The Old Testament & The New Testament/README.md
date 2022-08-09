@@ -8,6 +8,6 @@ pdfmom -k BBE.mom > BBE.pdf
 ### SHA256 checksums for the files
 ```txt
 05f07f11f844d9e0a146ac45d9eda5240bb59af2b724b725e98da88a930ac842  BBE.mom
-fd90d215f30f20cf9de750f9f73c6620093297b45073a74ddadb98fefac9331e  BBE.pdf
-cd6e0e9b8ca6ccf610cbedc4029980f306a340ac8f187132994e7e5c7561c09b  stylesheet.mom
+2fe07af0c4564340a94396b0d7c67311268b8668a9fc0c202d5da73747005362  BBE.pdf
+57cc7a16231462023ff48d05a9f8dbfe9fbab9990b84bc70db029e50aec88455  stylesheet.mom
 ```
