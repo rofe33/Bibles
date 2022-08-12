@@ -9,8 +9,6 @@
     -
     <a href="https://github.com/0xR3V/Bibles#a-list-of-all-the-bibles">A List of All the Bibles</a>
     -
-    <a href="https://github.com/0xR3V/Bibles#why-groff-mom">Why Groff-mom?</a>
-    -
     <a href="https://github.com/0xR3V/Bibles#contact-me">Contact Me</a>
 </div>
 
@@ -73,7 +71,7 @@ However, before making any changes, consult first mom's documentation. More info
 	- [ ] The Emphasized Bible by J. B. Rotherham (Rotherham)
 	- [ ] The Living Oracles NT (TLO)
 	- [ ] Twentieth Century New Testament (TCNT)
-	- [ ] Updated King James Version (UKJV)
+	- [x] Updated King James Version (UKJV)
 	- [ ] Webster Bible
 	- [ ] Weymouth NT 1912 (Weymouth)
 	- [ ] World English Bible (WEB)
@@ -87,10 +85,6 @@ However, before making any changes, consult first mom's documentation. More info
 	- [ ] Louis Segond (LSG)
 
 More bible versions/languages will be added in the future.
-
-
-# Why Groff-mom?
-I chose [Groff](https://www.gnu.org/software/groff/) because it's installation is minimal, and [mom](https://www.schaffter.ca/mom/mom-01.html) provides an easy way to style a document.
 
 # Contact Me
 Please contact me or open an issue if you have any concerns or suggestions.
