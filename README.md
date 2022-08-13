@@ -83,6 +83,9 @@ However, before making any changes, consult first mom's documentation. More info
 - [ ] Français (French) (FR)
 	- [x] La Sainte Bible
 	- [ ] Louis Segond (LSG)
+- [ ] Italiano (Italian) (IT)
+	- [x] Conferenza Episcopale Italiana (CEI)
+	- [ ] Giovanni Diodati Bibbia 1649 (ITADIO)
 
 More bible versions/languages will be added in the future.
 
