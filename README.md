@@ -13,7 +13,7 @@
 </div>
 
 # Introduction
-This repository contains **Public Domain** bibles in different languages and versions.
+This repository contains **Public Domain** bibles in different languages and versions written in groff mom syntax.
 
 There is a directory for each language, as well as a sub-directory for each version of that language.
 
