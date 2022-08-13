@@ -8,6 +8,6 @@ pdfmom -k UKJV.mom > UKJV.pdf
 ### SHA256 checksums for the files
 ```txt
 9f38b7399125aade6e6efb485ee011e54fae0e2870fe91b2c4891fe1c181855a  stylesheet.mom
-84e60646c71f59f14366be54ce31dabdb47169df59dba0d8caf43d5955748fdb  UKJV.mom
-839f22ea64e16ee891a933e075245853503ef51cc09199f91ccf3a175afc5e35  UKJV.pdf
+26045db6a764f6b912c78eed07d969709d7d9b0dfb359e0762cce20abbba6a25  UKJV.mom
+0e0ed84c9f97beda9974b7fd2b5df940f2e0846ab53ef6c41e6c3df85209198e  UKJV.pdf
 ```
