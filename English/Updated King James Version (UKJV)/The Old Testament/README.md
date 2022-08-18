@@ -1,5 +1,6 @@
-# How the PDF file is generated?
-The PDF file is created with the command `pdfmom,` which requires the most recent versions of `groff` and `mom`.
+# How is the PDF file created?
+The PDF file is created with the command `pdfmom`, which requires the most recent versions of `groff` and `mom`.
+More information can be found at [github](https://github.com/0xR3V/Bibles)
 
 ```shell
 pdfmom -k UKJV-the-old-testament.mom > UKJV-the-old-testament.pdf
@@ -7,7 +8,7 @@ pdfmom -k UKJV-the-old-testament.mom > UKJV-the-old-testament.pdf
 
 ### SHA256 checksums for the files
 ```txt
-9f38b7399125aade6e6efb485ee011e54fae0e2870fe91b2c4891fe1c181855a  stylesheet.mom
-7e37606d43c29207081edfc95d235108496681d2486e5cd9e7e37ab2ebaf490a  UKJV-the-old-testament.mom
-363ff512183c38df4176a07895bb9189b4554ff9506191cad9a27789b6a84fa1  UKJV-the-old-testament.pdf
+9f396a765f8ccc5868f460eb06beed1cbe2937a18700f1c0fd58ba4fe861053c stylesheet.mom
+5f308561e866a4a6b5f8663fcc53bfa8a45ea9654d433b066cd819d963c84ae8 UKJV-the-old-testament.mom
+ac962a383f4a1adb12b520fb3c50010dec554d59f1360d9c2e6e88bd5c814ad4 UKJV-the-old-testament.pdf
 ```
