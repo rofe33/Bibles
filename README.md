@@ -63,7 +63,10 @@ However, before making any changes, consult first mom's documentation. More info
 - [ ] العربية (Arabic) (AR)
 	- [ ] الكتاب المقدس - فان دايك (SVD)
 - [ ] English (EN)
-	- [ ] A Conservative Version (ACV)
+	- [x] A Conservative Version (ACV)
+		- <a href="https://github.com/0xR3V/Bibles/raw/main/English/A%20Conservative%20Version%20(ACV)/The%20New%20Testament/ACV-the-new-testament.pdf">Download The New Testament</a>
+		- <a href="https://github.com/0xR3V/Bibles/raw/main/English/A%20Conservative%20Version%20(ACV)/The%20Old%20Testament/ACV-the-old-testament.pdf">Download The Old Testament</a>
+		- <a href="https://github.com/0xR3V/Bibles/raw/main/English/A%20Conservative%20Version%20(ACV)/The%20Old%20Testament%20%26%20The%20New%20Testament/ACV.pdf">Download The Old Testament \& The New Testament</a>
 	- [ ] Aionian Bible
 	- [ ] American King James Version (AKJV)
 	- [ ] American Standard Version (ASV)
