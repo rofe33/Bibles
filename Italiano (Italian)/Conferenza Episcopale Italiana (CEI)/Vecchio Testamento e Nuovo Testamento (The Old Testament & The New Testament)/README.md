@@ -1,5 +1,6 @@
-# How the PDF file is generated?
-The PDF file is created with the command `pdfmom,` which requires the most recent versions of `groff` and `mom`.
+# How is the PDF file created?
+The PDF file is created with the command `pdfmom`, which requires the most recent versions of `groff` and `mom`.
+More information can be found at [github](https://github.com/0xR3V/Bibles)
 
 ```shell
 pdfmom -k CEI.mom > CEI.pdf
@@ -7,7 +8,7 @@ pdfmom -k CEI.mom > CEI.pdf
 
 ### SHA256 checksums for the files
 ```txt
-3b4b563f221992e955e68dd97e1cc73c6e5815a67dc669751b6faf89404ae046  CEI.mom
-f9921032d416ed096b9a78bcbb7f983a74b72a42df555c5d3248717a1407fade  CEI.pdf
-51ef811a487a4fcf1a31a7891d26fd228af890b4bbdc1bf8ec0af306e34cbabc  stylesheet.mom
+fac7de024e05dbf0c7e511ea9cf5996277e6643a89047462ed75b414df5c0416 CEI.mom
+8a0cbe894b20715ec1415cccb33f9dc3ccbcafc4a19c7d3c719715ebd9cdf8f9 stylesheet.mom
+162d5767f14c2fe2efbe37acff34119b94c3b0150d38e12de0a0ae1df209fa62 CEI.pdf
 ```
