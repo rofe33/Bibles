@@ -1,5 +1,6 @@
-# How the PDF file is generated?
-The PDF file is created with the command `pdfmom,` which requires the most recent versions of `groff` and `mom`.
+# How is the PDF file created?
+The PDF file is created with the command `pdfmom`, which requires the most recent versions of `groff` and `mom`.
+More information can be found at [github](https://github.com/0xR3V/Bibles)
 
 ```shell
 pdfmom -k BBE-the-old-testament.mom > BBE-the-old-testament.pdf
@@ -7,7 +8,7 @@ pdfmom -k BBE-the-old-testament.mom > BBE-the-old-testament.pdf
 
 ### SHA256 checksums for the files
 ```txt
-11ceef3d2ff13ff252db551348111eb939c27e9c0a2b5f2aa6638a5ed7f338d2  BBE-the-old-testament.mom
-a23028321864dc3e2aee75f5b69611a4b29140c665212b90c73827aa458ec369  BBE-the-old-testament.pdf
-57cc7a16231462023ff48d05a9f8dbfe9fbab9990b84bc70db029e50aec88455  stylesheet.mom
+e5cf739f20d902f9897e09e9558bc8876752cfb5d880957d4b768fb9b8f907a1 BBE-the-old-testament.mom
+b773421b432da3dc05ac8e6a1feb4022a3e8d2bcd1cfb14a4ad37852487947b2 stylesheet.mom
+3c860d4214656b31023f7bde4e4ae5798bb49fda7f370e591d3080d36fc33109 BBE-the-old-testament.pdf
 ```

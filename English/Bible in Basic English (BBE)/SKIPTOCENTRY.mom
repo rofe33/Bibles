@@ -1,0 +1,483 @@
+.de SKIP_TOC_ENTRY
+. if '\\$0'SKIP_TOC_ENTRY' \
+.   nr #SKIP_TOC_HEADING\\$1 \\$1
+. if '\\$0'RESTORE_TOC_ENTRY' \
+.   rr #SKIP_TOC_HEADING_\\$1
+..
+.
+.de HEADING
+.    ie !r pdfbx-top \{\
+'       br
+.       if \\n[@TOP] .br
+.    \}
+.    el \{\
+.       if r pdfbx-running .nr pdfbx-top 1
+.    \}
+.    if !\B'\\$1' \{\
+.       tm1 "[mom]: The first argument to \\$0 must be a numeric heading level.
+.       ab   [mom]: Aborting '\\n[.F]' at \\$0, line \\n[.c].
+.    \}
+.    if r #QUOTE     .rr #QUOTE
+.    if r #END_QUOTE .rr #END_QUOTE
+.    if r #EPIGRAPH  .rr #EPIGRAPH
+.    vs \\n[#DOC_LEAD]u
+.    if \\$1<\\n[#LEVEL] \
+.       nr #ACTIVE_LEVELS \\n[#LEVEL] \" loop count for resetting numbering registers
+.    nr #LAST_LEVEL \\n[#LEVEL]       \" used during TOC collection, if SPACE_TOC_ITEMS
+.    nr #LEVEL \\$1                   \" resets #LEVEL to arg
+.    shift
+.    nr #ARG_NUM 0 1
+.    while \\n+[#ARG_NUM]<=2 \{\
+.      if '\\$1'NAMED' \{\
+.         ds PDF_NM "\\$1 \\$2
+.         shift 2 \" \\$1 is now heading text
+.      \}
+.      if '\\$1'PARAHEAD' \{\
+.         nr #PARAHEAD 1
+.         shift \" \\$1 is now NAMED, if we have it; otherwise heading text
+.      \}
+.    \}
+.\" Spacing
+.    if \\n[#Q_LEAD_DIFF_CHECK] .sp -1
+.    if \\n[.t]<\\n[.v] .nr nl-from-heading \\n[nl]
+.    ie !\\n[#PARAHEAD] \{\
+.       if !\\n[@TOP] \{\
+.          nr #HEAD 1
+.          ie !\\n[#START] \{\
+.             nr #HEADING_NEEDS \\n[#NUM_ARGS]v+\\*[$HEAD_\\n[#LEVEL]_NEEDS]v+1v
+.             if \\n[#HEAD_\\n[#LEVEL]_SPACE_AFTER] .nr #HEADING_NEEDS +1v
+.             if \\n[.t]<\\n[#HEADING_NEEDS] .sp \\n[.t]u
+.             vpt 0
+.             if !r pdfbx-top \
+.               if !\\n[#SPACE_ADDED] .if !\\n[#LINEBREAK] .sp
+.          \}
+.          el \{\
+.             ie !\\n[#PP] \{\
+.                rr #START
+.                RESTORE_SPACE
+.                if !\\n[#SPACE_ADDED] \
+.                   if !\\n[#COLUMNS] .sp
+.             \}
+.             el .sp
+.          \}
+.          if \\n[#EPIGRAPH] \
+.             if \\n[#SINGLE_SPACE] .sp
+.       \}
+.       if \\n[#PP_SPACE] \
+.          if \\n[#QUOTE_4_HD] .sp .5v
+.       ie !\\n[#SPACE_ADDED] \{\
+.          if !\\n[.ns] \{\
+.             ie !\\n[#NO_SHIM] \
+.                if !\\n[#HEAD_\\n[#LEVEL]_NO_SHIM] \
+.                   if !r pdfbx-top .SHIM
+.             el \{\
+.                if !\\n[#NO_FLEX] \
+.                   if !\\n[#HEAD_\\n[#LEVEL]_NO_FLEX] \
+.                   if !r pdfbx-top .FLEX
+.             \}
+.          \}
+.       \}
+.       el .rr #SPACE_ADDED
+.       vpt
+.    \}
+.    el \{\
+.       if \\n[#NUM_ARGS]>1 \{\
+.          tm1 "[mom]: Error at line \\n[.c], \\$0.
+.          tm1 "       PARAHEAD may not be given more than 1 line of text.
+.          ab   [mom]: Aborting '\\n[.F]' at \\$0, line \\n[.c].
+.       \}
+.       vpt 0
+.       if !(\\n[#PRINT_STYLE]=1)&(\\n[#SINGLE_SPACE]=1) .sp -1v
+.       if \\n[#QUOTE_4_HD] \{\
+.          sp -1v
+.          if \\n[#PP_SPACE] \{\
+.             sp .5v
+.             SHIM
+.         \}
+.       \}
+.       if (\\n[#QUOTE_4_HD]=0)&(\\n[#LB_4_HD]=0)&(\\n[#START]=0) \
+.          if !\\n[#LB_4_PARAHEAD] .sp -1v
+.    \}
+.    ev HEADING
+.    evc 0
+.\" Style
+.    if \\n[#PRINT_STYLE]=2 \{\
+.       fam \\*[$HEAD_\\n[#LEVEL]_FAM]
+.       ft  \\*[$HEAD_\\n[#LEVEL]_FT]
+.       ps  \\n[#DOC_PT_SIZE]u\\*[$HEAD_\\n[#LEVEL]_SIZE]
+.       if r pdfbx-top \{\
+.          SIZESPECS
+.          ie \\n[#PP]=0 \{\
+.             rt
+.             ds pdfbx-cap-adj \\*[$CAP_HEIGHT]
+.             sp (\\*[wt\\n[stack]]/2u)+\\*[pdfbx-cap-adj]+\\*[gap\\n[stack]]u
+.          \}
+.          el \{\
+.             nr pdfbx-cap-adj \\*[$CAP_HEIGHT]-\\*[pdfbx-cap-adj]
+.             sp \\n[pdfbx-cap-adj]u
+.          \}
+.       \}
+.       nf
+.    \}
+.\" Numbering
+.    ds $TOC_HD_NUM_PREV \\*[$TOC_HD_NUM]
+.    rm $TOC_HD_NUM
+.    rm $PDF_HD_NUM
+.    ie \\n[#NUMBER_HEAD_\\n[#LEVEL]] \{\
+.       if \\n[#PREFIX_CH_NUM] .ds $HD_NUM \\n[#CH_NUM].
+.       nr #HEAD_\\n[#LEVEL]_NUM +1       \" incremented manually here; still auto-increments
+.\" Reset numbering registers for headings beneath current level
+.       nr @LEVEL \\n[#LEVEL] 1           \" loop step
+.       nr #LOOP \\n[#ACTIVE_LEVELS]      \" loop count
+.       while \\n+[@LEVEL]<=\\n[#LOOP] \
+.          if \\n[#HEAD_\\n[@LEVEL]_NUM] \
+.             nr #HEAD_\\n[@LEVEL]_NUM 0 1
+.\" Build numbering strings for body and toc
+.       nr @LEVEL 0 1                     \" loop step
+.       nr #LOOP \\n[#LEVEL]              \" loop count
+.       while \\n+[@LEVEL]<=\\n[#LOOP] \
+.          if \\n[#HEAD_\\n[@LEVEL]_NUM] \
+.             as $HD_NUM \\n[#HEAD_\\n[@LEVEL]_NUM].
+.       ie \\n[#TRUNC_TOC_HD_NUM] \
+.          ds $TOC_HD_NUM \\n[#HEAD_\\n[#LEVEL]_NUM].
+.       el .ds $TOC_HD_NUM \\*[$HD_NUM]
+.       if \\n[#LEVEL]=1 \
+.          ds $TOC_HD_NUM_PREV \\*[$TOC_HD_NUM]
+.       if \\n[#TOC_NO_HD_NUM] .rm $TOC_HD_NUM
+.       if !\\n[#HEAD_\\n[#LEVEL]_NUM]] .rm $TOC_HD_NUM
+.       as $HD_NUM \[hd-num-spacer]
+.       ds $PDF_HD_NUM \\*[$TOC_HD_NUM]
+.       if !'\\*[$TOC_HD_NUM]'' .as $TOC_HD_NUM \[toc-hd-num-spacer]
+.       if !'\\*[$PDF_HD_NUM]'' .as $PDF_HD_NUM " "
+.    \}
+.    el .nr @LEVEL \\n[#LEVEL] 1
+.\" TOC collection and formatting
+.    nr #TOC_ENTRY_PN \\n%+\\n[#PAGE_NUM_ADJ]
+.    af #TOC_ENTRY_PN \\g[#PAGENUMBER]
+.    nr #ARG_NUM 0 1
+.    while \\n[#ARG_NUM]<\\n[#NUM_ARGS] \{\
+.       as $TOC_HEAD_\\n[#LEVEL]_ITEM "\\$[\\n+[#ARG_NUM]]
+.       if \\n[#NUM_ARGS]>\\n[#ARG_NUM] \
+.          as $TOC_HEAD_\\n[#LEVEL]_ITEM "\\*[toc-word-space]
+.    \}
+.    PDF_BOOKMARK \
+        \\*[PDF_NM] \\n[#LEVEL]+1 \
+        \\*[$PDF_HD_NUM] \\*[$TOC_HEAD_\\n[#LEVEL]_ITEM]
+.    rm PDF_NM
+.    rm $PDF_HD_NUM
+.    ev TOC_EV
+.    ie \\n[#PRINT_STYLE]=1 \{\
+.       fam \\*[$TYPEWRITER_FAM]
+.       ft  R
+.       ps  \\*[$TYPEWRITER_PS]
+.    \}
+.    el \{\
+.       FAMILY  \\*[$TOC_HEAD_\\n[#LEVEL]_FAM]
+.       FT      \\*[$TOC_HEAD_\\n[#LEVEL]_FT]
+.       ps \\n[#TOC_PS]u\\*[$TOC_HEAD_\\n[#LEVEL]_SIZE]
+.    \}
+.\" Indents for TOC heading levels.
+.\" First, numbered heads.  @LEVEL here is #LEVEL+1
+.    ie \\n[#NUMBER_HEAD_\\n[#LEVEL]] \{\
+.       ie !\\n[#TOC_NO_HD_NUM] \{\
+.          ie \\n[#TRUNC_TOC_HD_NUM] \{\
+.             if !\\n[#TOC_HEAD_\\n[@LEVEL]_INDENT_SET] \{\
+.                ie !\\n[#FROM_STYLE_\\n[@LEVEL]] \{\
+.                   ie !\\n[#NUMBER_HEAD_\\n[@LEVEL]] \
+.                      nr #TOC_HEAD_\\n[@LEVEL]_INDENT \
+\\n[#TOC_HEAD_\\n-[@LEVEL]_INDENT]+\
+\w'\\*[$TOC_HD_NUM]'+\
+1.5m
+.                   el \
+.                      nr #TOC_HEAD_\\n[@LEVEL]_INDENT \
+\\n[#TOC_HEAD_\\n-[@LEVEL]_INDENT]+\
+\w'\\*[$TOC_HD_NUM]'
+.                \}
+.                el \
+.                   nr #TOC_HEAD_\\n[@LEVEL]_INDENT \
+                      \\n[#TOC_HEAD_\\n-[@LEVEL]_INDENT]
+.             \}
+.          \}
+.          el \{\
+.             if !\\n[#TOC_HEAD_\\n[@LEVEL]_INDENT_SET] \{\
+.                ie !\\n[#FROM_STYLE_\\n[@LEVEL]] \{\
+.                   ie \\n[#NUMBER_HEAD_\\n-[@LEVEL]] \{\
+.                      ie !\\n[#NUMBER_HEAD_\\n+[@LEVEL]] \
+.                         nr #TOC_HEAD_\\n[@LEVEL]_INDENT \
+\\n[#TOC_HEAD_\\n-[@LEVEL]_INDENT]+\
+\w'\\*[$TOC_HD_NUM_PREV]'+\
+1.5m
+.                      el \{\
+.\" Get the number of digits in the chapter number
+.                         ds ch-num-width \\n[#CH_NUM]
+.                         length ch-num-width \\*[ch-num-width]
+.                         nr ch-num-width -1
+.                         nr num-ch-digits \w'\0'*\\n[ch-num-width]
+.                         nr #TOC_HEAD_\\n[@LEVEL]_INDENT \
+\\n[#TOC_HEAD_\\n-[@LEVEL]_INDENT]+\
+\\n[num-ch-digits]+\
+\w'.\[toc-hd-num-spacer]'
+.                      \}
+.                   \}
+.                   el \
+.                      nr #TOC_HEAD_\\n[@LEVEL]_INDENT \
+\\n[#TOC_HEAD_\\n-[@LEVEL]_INDENT]+\
+\w'\\n[#TOC_HD_NUM].'
+.                   ie \\n[#LEVEL]=1 \
+.                      nr #TOC_HEAD_\\n+[@LEVEL]_INDENT +\w'\0'
+.                   el \{\
+.                      if !\\n[#NUMBER_HEAD_\\n[@LEVEL]] \{\
+.                         nr @LEVEL \\n+[@LEVEL] 1
+.                         nr #TOC_HEAD_\\n+[@LEVEL]_INDENT +\w'\0'
+.                      \}
+.                   \}
+.                \}
+.                el \
+.                   nr #TOC_HEAD_\\n[@LEVEL]_INDENT \
+\\n[#TOC_HEAD_\\n-[@LEVEL]_INDENT]+\
+\\n[#TOC_HEAD_\\n+[@LEVEL]_INDENT]
+.             \}
+.             if \\n[#LEVEL]=1 \{\
+.                if \\n[#NUMBER_HEAD_\\n[@LEVEL]] \{\
+.                   if \\n[#PREFIX_CH_NUM] \
+.                      nr #TOC_HEAD_\\n[@LEVEL]_INDENT \
+\w'\\*[$TOC_HD_NUM]'
+.                \}
+.             \}
+.          \}
+.       \}
+.       el \{\
+.          ie !\\n[#FROM_STYLE_\\n[@LEVEL]] \{\
+.             if !\\n[#TOC_HEAD_\\n[@LEVEL]_INDENT_SET] \
+.                nr #TOC_HEAD_\\n[@LEVEL]_INDENT \
+                    \\n[#TOC_HEAD_\\n-[@LEVEL]_INDENT]+1.5m
+.          \}
+.          el \{\
+.             if !\\n[#TOC_HEAD_\\n[@LEVEL]_INDENT_SET] \
+.                nr #TOC_HEAD_\\n[@LEVEL]_INDENT \
+\\n[#TOC_HEAD_\\n-[@LEVEL]_INDENT]+\
+\\n[#TOC_HEAD_\\n+[@LEVEL]_INDENT]
+.          \}
+.       \}
+.    \}
+.\" Non-numbered heads
+.    el \{\
+.       nr @LEVEL \\n[#LEVEL] 1
+.\" increments @LEVEL even if false
+.       ie \\n[#FROM_STYLE_\\n+[@LEVEL]] \{\
+.          if !\\n[#TOC_HEAD_\\n[@LEVEL]_INDENT_SET] \{\
+.             nr #TOC_HEAD_\\n[@LEVEL]_INDENT \
+\\n[#TOC_HEAD_\\n[#LEVEL]_INDENT]+\
+\\n[#TOC_HEAD_\\n[@LEVEL]_INDENT]
+.             if !\\n[#LEVEL]=\\n[#LAST_LEVEL] \{\
+.                if \\n[#NUMBER_HEAD_\\n[@LEVEL]] \
+.                   nr #TOC_HEAD_\\n[#LEVEL]_INDENT \
+\\n[#TOC_HEAD_\\n[@LEVEL]_INDENT]+\
+\w'\\*[$TOC_HD_NUM_PREV]'
+.             \}
+.          \}
+.       \}
+.       el \{\
+.          nr #TOC_HEAD_\\n[@LEVEL]_INDENT \
+              \\n[#TOC_HEAD_\\n-[@LEVEL]_INDENT]+1.5m
+.          if \\n[#LEVEL]=1 \{\
+.             if !\\n[#FROM_STYLE_1] \
+.                nr #TOC_HEAD_1_INDENT 0
+.          \}
+.       \}
+.    \}
+.    nr #TOC_HEAD_\\n[@LEVEL]_INDENT_SET 1
+.    if !\\n[#SKIP_TOC_HEADING\\n[#LEVEL]]=\\n[#LEVEL] \
+.       HD_TO_TOC
+.    rm $TOC_HEAD_\\n[#LEVEL]_ITEM
+.\" Print heading
+.    ev HEADING
+.    if !\\n[#PARAHEAD] .\\*[$HEAD_\\n[#LEVEL]_QUAD]
+.    if \\n[#CAPS_ON] \{\
+.       CAPS OFF
+.       nr #CAPS_RESTORE 1
+.    \}
+.    if \\n[#HEAD_\\n[#LEVEL]_CAPS] \{\
+.       CAPS
+.       nr #CAPS_OFF 1
+.    \}
+.    if \\n[#SMALLCAPS_ON] \{\
+.       SMALLCAPS OFF
+.       nr #SMALLCAPS_RESTORE 1
+.    \}
+.    if \\n[#HEAD_\\n[#LEVEL]_SMALLCAPS] \{\
+.       SMALLCAPS
+.       nr #SMALLCAPS_OFF 1
+.    \}
+.    if !'\\*[$HEAD_\\n[#LEVEL]_COLOR]'' \
+.       COLOR \\*[$HEAD_\\n[#LEVEL]_COLOR]
+.    nop \X'ps: exec decornone'\c
+.    if r pdfbx-top \{\
+.       ds $RESTORE_ADJ \\*[$HEAD_\\n[#LEVEL]_BASELINE_ADJ]
+.       ds $HEAD_\\n[#LEVEL]_BASELINE_ADJ 0
+.    \}
+.    nr #ARG_NUM 0 1
+.    while \\n+[#ARG_NUM]<=\\n[#NUM_ARGS] \{\
+.       if \\n[#PARAHEAD] \
+.          nr #PP_TEXT_OFFSET \
+              \w'\\*[$HD_NUM]\\$[\\n[#ARG_NUM]]'+\w'\[parahead-spacer]'
+.       if (\\n[#HEAD_\\n[#LEVEL]_UNDERSCORE]=0)&(\\n[#HEAD_\\n[#LEVEL]_UNDERSCORE2]=0) \{\
+.          ie \\n[#HD_NUM_INDENT] \{\
+.             if !'\\*[$HEAD_\\n[#LEVEL]_QUAD]'CENTER' \
+.                ti \\n[#HD_NUM_INDENT]u
+.             PRINT \
+"\v'-\\*[$HEAD_\\n[#LEVEL]_BASELINE_ADJ]'\\$[\\n[#ARG_NUM]]
+.             br
+.          \}
+.          el \{\
+.             ie !\\n[#PARAHEAD] \{\
+.                PRINT \
+"\v'-\\*[$HEAD_\\n[#LEVEL]_BASELINE_ADJ]'\\*[$HD_NUM]\\$[\\n[#ARG_NUM]]
+.                br
+.             \}
+.             el \{\
+.                if (\\n[#PP]>0):(\\n[#INDENT_FIRST_PARAS]) \{\
+.                   if !\\n[#LB_4_PARAHEAD] \{\
+.                      if !\\n[#START] \{\
+.                         if \\n[#PP_ACTIVE] \{\
+.                            ie \\n[#PP]=1 .br
+.                            el \{\
+.                               nr #PP_TEXT_OFFSET +\\n[#PP_INDENT]
+.                               ie !\\n[pdfbx-running] .ti \\n[#PP_INDENT]u
+.                               el .ti \\n[#PP_INDENT]u+\\*[wt\\n[stack]]+\\*[gap\\n[stack]]u
+.                            \}
+.                         \}
+.                      \}
+.                   \}
+.                \}
+.                ie \\n[#PRINT_STYLE]=1 \
+.                   PRINT "\\*[UL]\\*[$HD_NUM]\\$[\\n[#ARG_NUM]]\\*[ULX]
+.                el .PRINT "\\*[$HD_NUM]\\$[\\n[#ARG_NUM]]
+.                rr #LB_4_PARAHEAD
+.                sp -1v
+.             \}
+.          \}
+.       \}
+.       if \\n[#HEAD_\\n[#LEVEL]_UNDERSCORE] \{\
+.          nr #SAVED_UL_WEIGHT \\n[#UNDERSCORE_WEIGHT]
+.          UNDERSCORE_WEIGHT \\*[$HEAD_\\n[#LEVEL]_UL_WEIGHT]
+.          ie \\n[#HD_NUM_INDENT] \{\
+.             if !'\\*[$HEAD_\\n[#LEVEL]_QUAD]'CENTER' \
+.                ti \\n[#HD_NUM_INDENT]u
+.             UNDERSCORE \\*[$HEAD_\\n[#LEVEL]_UL_GAP] \
+                "\v'-\\*[$HEAD_\\n[#LEVEL]_BASELINE_ADJ]'\\$[\\n[#ARG_NUM]]
+.             br
+.          \}
+.          el \{\
+.             ie !\\n[#PARAHEAD] \{\
+.                UNDERSCORE \\*[$HEAD_\\n[#LEVEL]_UL_GAP] \
+"\v'-\\*[$HEAD_\\n[#LEVEL]_BASELINE_ADJ]'\\*[$HD_NUM]\\$[\\n[#ARG_NUM]]
+.                br
+.             \}
+.             el \{\
+.                if (\\n[#PP]>0):(\\n[#INDENT_FIRST_PARAS]) \{\
+.                   if !\\n[#LB_4_HD] \{\
+.                      if !\\n[#START] \{\
+.                         if \\n[#PP_ACTIVE] \{\
+.                   nr #PP_TEXT_OFFSET +\\n[#PP_INDENT]
+.                   if (\\n[#PRINT_STYLE]=1)&(\\n[#SINGLE_SPACE]=1) .sp -1v
+.                   ti \\n[#PP_INDENT]u
+.                         \}
+.                      \}
+.                   \}
+.                \}
+.                UNDERSCORE \\*[$HEAD_\\n[#LEVEL]_UL_GAP] \
+                   "\\*[$HD_NUM]\\$[\\n[#ARG_NUM]]
+.                sp -1v
+.             \}
+.          \}
+.          nr #UNDERSCORE_WEIGHT \\n[#SAVED_UL_WEIGHT]
+.       \}
+.       if \\n[#HEAD_\\n[#LEVEL]_UNDERSCORE2] \{\
+.          nr #SAVED_UL2_WEIGHT \\n[#UNDERSCORE_WEIGHT]
+.          UNDERSCORE_WEIGHT \\*[$HEAD_\\n[#LEVEL]_UL2_WEIGHT]
+.          ie \\n[#HD_NUM_INDENT] \{\
+.             if !'\\*[$HEAD_\\n[#LEVEL]_QUAD]'CENTER' \
+.                ti \\n[#HD_NUM_INDENT]u
+.             UNDERSCORE2 \\*[$HEAD_\\n[#LEVEL]_UL2_GAP_1] \
+                \\*[$HEAD_\\n[#LEVEL]_UL2_GAP_2] \
+                "\v'-\\*[$HEAD_\\n[#LEVEL]_BASELINE_ADJ]'\\$[\\n[#ARG_NUM]]
+.             br
+.          \}
+.          el \{\
+.             ie !\\n[#PARAHEAD] \{\
+.                UNDERSCORE2 \\*[$HEAD_\\n[#LEVEL]_UL2_GAP_1] \
+                   \\*[$HEAD_\\n[#LEVEL]_UL2_GAP_2] \
+"\v'-\\*[$HEAD_\\n[#LEVEL]_BASELINE_ADJ]'\\*[$HD_NUM]\\$[\\n[#ARG_NUM]]
+.                br
+.             \}
+.             el \{\
+.                if (\\n[#PP]>0):(\\n[#INDENT_FIRST_PARAS]) \{\
+.                   if !\\n[#LB_4_HD] \{\
+.                      if !\\n[#START] \{\
+.                         if \\n[#PP_ACTIVE] \{\
+.                            nr #PP_TEXT_OFFSET +\\n[#PP_INDENT]
+.                            if (\\n[#PRINT_STYLE]=1)&(\\n[#SINGLE_SPACE]=1) \
+.                               sp -1v
+.                            ti \\n[#PP_INDENT]u
+.                         \}
+.                      \}
+.                   \}
+.                \}
+.                UNDERSCORE2 \\*[$HEAD_\\n[#LEVEL]_UL2_GAP_1] \
+\\*[$HEAD_\\n[#LEVEL]_UL2_GAP_2] "\\*[$HD_NUM]\\$[\\n[#ARG_NUM]]
+.                sp -1v
+.             \}
+.          \}
+.          nr #UNDERSCORE_WEIGHT \\n[#SAVED_UL2_WEIGHT]
+.       \}
+.       if !\\n[#HD_NUM_INDENT] .nr #HD_NUM_INDENT \w'\\*[$HD_NUM]'
+.    \}
+.    if r pdfbx-top \{\
+.       ds $HEAD_\\n[#LEVEL]_BASELINE_ADJ \\*[$RESTORE_ADJ]
+.       if !\\n[#PARAHEAD] .sp \\*[$HEAD_\\n[#LEVEL]_BASELINE_ADJ]
+.    \}
+.    if !\\n[#PARAHEAD] \
+.       if \\n[#HEAD_\\n[#LEVEL]_SPACE_AFTER] .sp
+.    if \\n[#CAPS_OFF] \{\
+.       CAPS OFF
+.       rr #CAPS_OFF
+.    \}
+.    if \\n[#CAPS_RESTORE] \{\
+.       CAPS
+.       rr #CAPS_RESTORE
+.    \}
+.    if \\n[#SMALLCAPS_OFF] \{\
+.       SMALLCAPS OFF
+.       rr #SMALLCAPS_OFF
+.    \}
+.    if \\n[#SMALLCAPS_RESTORE] \{\
+.       SMALLCAPS
+.       rr #SMALLCAPS_RESTORE
+.    \}
+.    ev
+.    rm $HD_NUM
+.    rr #HD_NUM_INDENT
+.    if \\n[@TOP] \{\
+.       ch RR_@TOP
+.       rr @TOP
+.       rs
+.       nop \&
+.       sp -1
+.    \}
+.    if \\n[#PARAHEAD] \{\
+.       ie !\\n[pdfbx-running] .ti \\n[#PP_TEXT_OFFSET]u
+.       el .ti \\n[#PP_TEXT_OFFSET]u+\\*[wt\\n[stack]]+\\*[gap\\n[stack]]u
+.    \}
+.    if !\\n[#PARAHEAD]  .nr #PP 0
+.    rr #PARAHEAD
+.    if \\n[#LB_4_HD]    .rr #LB_4_HD
+.    if \\n[#QUOTE_4_HD] .rr #QUOTE_4_HD
+.    vpt
+.    rr nl-from-heading
+.    if r pdfbx-top \{\
+.       rr pdfbx-top
+.       nr pdfbx-top\\n[stack] 1
+.    \}
+.    ev 0
+..
