@@ -98,12 +98,15 @@ However, before making any changes, consult first mom's documentation. More info
 - [ ] Español (Spanish) (ES)
 	- [ ] Reina-Valera Antigua (RVA)
 	- [ ] Versión Biblia Libre
-- [ ] Français (French) (FR)
+- [x] Français (French) (FR)
 	- [x] La Sainte Bible
 		- <a href="https://raw.githubusercontent.com/0xR3V/Bibles/main/Fran%C3%A7ais%20(French)/La%20Sainte%20Bible/Nouveau%20Testament%20(The%20New%20Testament)/fra_fob-nouveau-testament.pdf">Télécharger Le Nouveau Testament</a>
 		- <a href="https://raw.githubusercontent.com/0xR3V/Bibles/main/Fran%C3%A7ais%20(French)/La%20Sainte%20Bible/L'Ancien%20Testament%20(The%20Old%20Testament)/fra_fob-l'ancien-testament.pdf">Télécharger L'Ancien Testament</a>
 		- <a href="https://raw.githubusercontent.com/0xR3V/Bibles/main/Fran%C3%A7ais%20(French)/La%20Sainte%20Bible/L'Ancien%20Testament%20et%20Nouveau%20Testament%20(The%20Old%20Testament%20%26%20The%20New%20Testament)/fra_fob.pdf">Télécharger L'Ancien Testament et Le Nouveau Testament</a>
-	- [ ] Louis Segond (LSG)
+	- [x] Louis Segond (LSG)
+		- <a href="https://github.com/0xR3V/Bibles/raw/main/Fran%C3%A7ais%20(French)/Louis%20Segond%20(LSG)/Nouveau%20Testament%20(The%20New%20Testament)/LSG-nouveau-testament.pdf">Télécharger Le Nouveau Testament</a>
+		- <a href="https://github.com/0xR3V/Bibles/raw/main/Fran%C3%A7ais%20(French)/Louis%20Segond%20(LSG)/L'Ancien%20Testament%20(The%20Old%20Testament)/LSG-l'ancien-testament.pdf">Télécharger L'Ancien Testament</a>
+		- <a href="https://github.com/0xR3V/Bibles/raw/main/Fran%C3%A7ais%20(French)/Louis%20Segond%20(LSG)/L'Ancien%20Testament%20et%20Nouveau%20Testament%20(The%20Old%20Testament%20%26%20The%20New%20Testament)/LSG.pdf">Télécharger L'Ancien Testament et Le Nouveau Testament</a>
 - [ ] Italiano (Italian) (IT)
 	- [x] Conferenza Episcopale Italiana (CEI)
 		- <a href="https://github.com/0xR3V/Bibles/raw/main/Italiano%20(Italian)/Conferenza%20Episcopale%20Italiana%20(CEI)/Nuovo%20Testamento%20(The%20New%20Testament)/CEI-nuovo-testamento.pdf">Scarica Nuovo Testamento</a>
