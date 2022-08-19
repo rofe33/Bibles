@@ -1,6 +1,6 @@
 # How is the PDF file created?
 The PDF file is created with the command `pdfmom`, which requires the most recent versions of `groff` and `mom`.
-More information can be found at [github](https://github.com/0xR3V/Bibles)
+More information can be found at [github](https://github.com/0xR3V/Bibles).
 
 ```shell
 pdfmom -k fra_fob-nouveau-testament.mom > fra_fob-nouveau-testament.pdf
