@@ -96,7 +96,10 @@ However, before making any changes, consult first mom's documentation. More info
 	- [ ] World Messianic Bible
 	- [ ] Young's Literal Translation (YLT)
 - [ ] Español (Spanish) (ES)
-	- [ ] Reina-Valera Antigua (RVA)
+	- [x] Reina-Valera Antigua (RVA)
+		- <a href="https://github.com/0xR3V/Bibles/raw/main/Espa%C3%B1ol%20(Spanish)/Reina-Valera%20Antigua%20(RVA)/Nuevo%20Testamento%20(The%20New%20Testament)/RVA-nuevo-testamento.pdf">Descarga Nuevo Testamento</a>
+		- <a href="https://github.com/0xR3V/Bibles/raw/main/Espa%C3%B1ol%20(Spanish)/Reina-Valera%20Antigua%20(RVA)/Viejo%20Testamento%20(The%20Old%20Testament)/RVA-viejo-testamento.pdf">Descarga Viejo Testamento</a>
+		- <a href="https://github.com/0xR3V/Bibles/raw/main/Espa%C3%B1ol%20(Spanish)/Reina-Valera%20Antigua%20(RVA)/Viejo%20Testamento%20y%20Nuevo%20Testamento%20(The%20Old%20Testament%20%26%20The%20New%20Testament)/RVA.pdf">Descarga Viejo Testamento y Viejo Testamento</a>
 	- [ ] Versión Biblia Libre
 - [x] Français (French) (FR)
 	- [x] La Sainte Bible
