@@ -110,12 +110,15 @@ However, before making any changes, consult first mom's documentation. More info
 		- <a href="https://github.com/0xR3V/Bibles/raw/main/Fran%C3%A7ais%20(French)/Louis%20Segond%20(LSG)/Nouveau%20Testament%20(The%20New%20Testament)/LSG-nouveau-testament.pdf">Télécharger Le Nouveau Testament</a>
 		- <a href="https://github.com/0xR3V/Bibles/raw/main/Fran%C3%A7ais%20(French)/Louis%20Segond%20(LSG)/L'Ancien%20Testament%20(The%20Old%20Testament)/LSG-l'ancien-testament.pdf">Télécharger L'Ancien Testament</a>
 		- <a href="https://github.com/0xR3V/Bibles/raw/main/Fran%C3%A7ais%20(French)/Louis%20Segond%20(LSG)/L'Ancien%20Testament%20et%20Nouveau%20Testament%20(The%20Old%20Testament%20%26%20The%20New%20Testament)/LSG.pdf">Télécharger L'Ancien Testament et Le Nouveau Testament</a>
-- [ ] Italiano (Italian) (IT)
+- [x] Italiano (Italian) (IT)
 	- [x] Conferenza Episcopale Italiana (CEI)
 		- <a href="https://github.com/0xR3V/Bibles/raw/main/Italiano%20(Italian)/Conferenza%20Episcopale%20Italiana%20(CEI)/Nuovo%20Testamento%20(The%20New%20Testament)/CEI-nuovo-testamento.pdf">Scarica Nuovo Testamento</a>
 		- <a href="https://github.com/0xR3V/Bibles/raw/main/Italiano%20(Italian)/Conferenza%20Episcopale%20Italiana%20(CEI)/Vecchio%20Testamento%20(The%20Old%20Testament)/CEI-vecchio-testamento.pdf">Scarica Vecchio Testamento</a>
 		- <a href="https://raw.githubusercontent.com/0xR3V/Bibles/main/Italiano%20(Italian)/Conferenza%20Episcopale%20Italiana%20(CEI)/Vecchio%20Testamento%20e%20Nuovo%20Testamento%20(The%20Old%20Testament%20%26%20The%20New%20Testament)/CEI.pdf">Scarica Vecchio Testamento e Nuovo Testamento</a>
-	- [ ] Giovanni Diodati Bibbia 1649 (ITADIO)
+	- [x] Giovanni Diodati Bibbia 1649 (ITADIO)
+		- <a href="https://github.com/0xR3V/Bibles/raw/main/Italiano%20(Italian)/Giovanni%20Diodati%20Bibbia%201649%20(ITADIO)/Nuovo%20Testamento%20(The%20New%20Testament)/ITADIO-nuovo-testamento.pdf">Scarica Nuovo Testamento</a>
+		- <a href="https://github.com/0xR3V/Bibles/raw/main/Italiano%20(Italian)/Giovanni%20Diodati%20Bibbia%201649%20(ITADIO)/Vecchio%20Testamento%20(The%20Old%20Testament)/ITADIO-vecchio-testamento.pdf">Scarica Vecchio Testamento</a>
+		- <a href="https://github.com/0xR3V/Bibles/raw/main/Italiano%20(Italian)/Giovanni%20Diodati%20Bibbia%201649%20(ITADIO)/Vecchio%20Testamento%20e%20Nuovo%20Testamento%20(The%20Old%20Testament%20%26%20The%20New%20Testament)/ITADIO.pdf">Scarica Vecchio Testamento e Nuovo Testamento</a>
 
 More bible versions/languages will be added in the future.
 
