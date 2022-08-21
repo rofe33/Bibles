@@ -1,0 +1,104 @@
+.\"
+.\" Public Domain
+.\" 
+    
+.\"
+.\"
+.INCLUDE ../SKIPTOCENTRY.mom \" Comment or delete this line if you want a detailed table of contents. If not, leave this line alone. (NOTICE: You should also delete the line: ".SKIP_TOC_ENTRY 2")
+.\"
+.nr supnum 0 1
+.while \n+[supnum]<177 \{\
+. char \[\n[supnum]] \*[SUP]\n[supnum]\*[SUPX]
+.\}
+.\"
+.\" .SUPERSCRIPT_RAISE_AMOUNT .23m
+.\"
+.PAPER A5
+.\"
+.PRINTSTYLE TYPESET \" Do not change
+.DOCTYPE DEFAULT \" Do not change
+.\"
+.NEWCOLOR gray GRAY #50
+.PDF_LINK_COLOR gray
+.\"
+.T_MARGIN .75i
+.B_MARGIN .75i
+.L_MARGIN .45i
+.R_MARGIN .45i
+.PT_SIZE 9
+.AUTOLEAD 2
+.\" Setting the document title
+.DOCTITLE "Giovanni" "Diodati" "Bibbia" "1649"
+.SUBTITLE "Giovanni Diodati Bible 1649"
+.DOC_COVER DOCTITLE SUBTITLE
+.\" Styling DOCTITLE.
+.DOC_COVER_TITLE_FONT BI
+.DOC_COVER_TITLE_SIZE +55
+.DOC_COVER_TITLE_COLOR gray
+.DOC_COVER_LEAD +35
+.DOC_COVER_SUBTITLE_SIZE +10
+.\"
+.PDF_TITLE "Giovanni Diodati Bibbia 1649 | Giovanni Diodati Bible 1649" \" Do not change
+.\" Copyright Page
+.DOCHEADER off 1i \" Do not change
+.PAGINATION off \" Do not change
+.TITLE "Copyright" \" Do not change
+.NO_TOC_ENTRY
+.START
+.PP
+\f[B]Public Domain\f[]
+.BR
+
+    
+.TOC_AFTER_HERE
+.COLLATE
+.\" Setting the cover title and the title
+.TITLE COVER "Vecchio" "Testamento"
+.TITLE "Vecchio Testamento"
+.COVER TITLE
+.\" Styling TITLE COVER.
+.COVER_TITLE_FONT BI
+.COVER_TITLE_SIZE +50
+.COVER_TITLE_LEAD +35
+.COVER_TITLE_COLOR gray
+.\" Styling TITLE.
+.TITLE_FONT BI
+.TITLE_SIZE +15
+.TITLE_COLOR gray
+.\"
+.HEADER_RIGHT \E*[$TITLE]
+.HEADER_CENTER #
+.\" Styling the left header
+.HEADER_MARGIN .4i
+.HEADER_RIGHT_FONT I
+.HEADER_CENTER_FONT B
+.HEADER_LEFT_FONT BI
+.HEADER_RIGHT_CAPS off
+.\" Styling levels 1 and 2 of the heading
+.HEADING_STYLE 1 \
+    FONT BI \
+    COLOR gray \
+    SIZE +10
+.HEADING_STYLE 2 \
+    FONT BI \
+    COLOR gray \
+    SIZE +5 \
+    NEEDS 2
+.\" Styling DROPCAP
+.DROPCAP_COLOR gray
+.DROPCAP_FONT B
+.\"
+.RECTO_VERSO
+.FORCE_RECTO
+.\"
+.SMARTQUOTES
+.\"
+.SPACE_TOC_ITEMS
+.TOC_HEADER_STRING "Indice"
+.SKIP_TOC_ENTRY 2 \" Comment or delete this line if you want a detailed table of contents. If not, leave this line alone.
+.\"
+.DOCHEADER
+.PAGENUMBER 1
+.COLUMNS 2 0.2i
+.\"
+.START
