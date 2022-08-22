@@ -74,7 +74,10 @@ However, before making any changes, consult first mom's documentation. More info
 		- <a href="https://raw.githubusercontent.com/0xR3V/Bibles/main/English/Bible in Basic English (BBE)/The New Testament/BBE-the-new-testament.pdf">Download The New Testament</a>
 		- <a href="https://raw.githubusercontent.com/0xR3V/Bibles/main/English/Bible%20in%20Basic%20English%20(BBE)/The%20Old%20Testament/BBE-the-old-testament.pdf">Download The Old Testament</a>
 		- <a href="https://raw.githubusercontent.com/0xR3V/Bibles/main/English/Bible%20in%20Basic%20English%20(BBE)/The%20Old%20Testament%20%26%20The%20New%20Testament/BBE.pdf">Download The Old Testament \& The New Testament</a>
-	- [ ] Darby Translation (DARBY)
+	- [x] Darby Translation (DARBY)
+		- <a href="https://github.com/0xR3V/Bibles/raw/main/English/Darby%20Translation%20(DARBY)/The%20New%20Testament/DARBY-the-new-testament.pdf">Download The New Testament</a>
+		- <a href="https://github.com/0xR3V/Bibles/raw/main/English/Darby%20Translation%20(DARBY)/The%20Old%20Testament/DARBY-the-old-testament.pdf">Download The Old Testament</a>
+		- <a href="https://github.com/0xR3V/Bibles/raw/main/English/Darby%20Translation%20(DARBY)/The%20Old%20Testament%20%26%20The%20New%20Testament/DARBY.pdf">Download The Old Testament \& The New Testament</a>
 	- [ ] Douay-Rheims 1899 American Edition (DRA)
 	- [ ] Geneva Bible 1599
 	- [x] King James Version (KJV)
