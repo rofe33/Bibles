@@ -68,7 +68,10 @@ However, before making any changes, consult first mom's documentation. More info
 		- <a href="https://github.com/0xR3V/Bibles/raw/main/English/A%20Conservative%20Version%20(ACV)/The%20Old%20Testament/ACV-the-old-testament.pdf">Download The Old Testament</a>
 		- <a href="https://github.com/0xR3V/Bibles/raw/main/English/A%20Conservative%20Version%20(ACV)/The%20Old%20Testament%20%26%20The%20New%20Testament/ACV.pdf">Download The Old Testament \& The New Testament</a>
 	- [ ] Aionian Bible
-	- [ ] American King James Version (AKJV)
+	- [x] American King James Version (AKJV)
+		- <a href="https://github.com/0xR3V/Bibles/raw/main/English/American%20King%20James%20Version%20(AKJV)/The%20New%20Testament/AKJV-the-new-testament.pdf">Download The New Testament</a>
+		- <a href="https://github.com/0xR3V/Bibles/raw/main/English/American%20King%20James%20Version%20(AKJV)/The%20Old%20Testament/AKJV-the-old-testament.pdf">Download The Old Testament</a>
+		- <a href="https://github.com/0xR3V/Bibles/raw/main/English/American%20King%20James%20Version%20(AKJV)/The%20Old%20Testament%20%26%20The%20New%20Testament/AKJV.pdf">Download The Old Testament \& The New Testament</a>
 	- [ ] American Standard Version (ASV)
 	- [x] Bible in Basic English (BBE)
 		- <a href="https://raw.githubusercontent.com/0xR3V/Bibles/main/English/Bible in Basic English (BBE)/The New Testament/BBE-the-new-testament.pdf">Download The New Testament</a>
