@@ -86,7 +86,7 @@ However, before making any changes, consult first mom's documentation. More info
 		- <a href="https://github.com/0xR3V/Bibles/raw/main/English/Douay-Rheims%201899%20American%20Edition%20(DRA)/The%20Old%20Testament/DRA-the-old-testament.pdf">Download The Old Testament</a>
 		- <a href="https://github.com/0xR3V/Bibles/raw/main/English/Douay-Rheims%201899%20American%20Edition%20(DRA)/The%20Old%20Testament%20%26%20The%20New%20Testament/DRA.pdf">Download The Old Testament & The New Testament</a>
 	- [x] Geneva Bible 1599
-		- <a href="https://github.com/0xR3V/Bibles/raw/main/English/Geneva%20Bible%201599/The%20New%20Testament/Geneva1599-the-new-testament.pdf">Download The New Testament</a>
+		- /Y<a href="https://github.com/0xR3V/Bibles/raw/main/English/Geneva%20Bible%201599/The%20New%20Testament/Geneva1599-the-new-testament.pdf">Download The New Testament</a>
 		- <a href="https://github.com/0xR3V/Bibles/raw/main/English/Geneva%20Bible%201599/The%20Old%20Testament/Geneva1599-the-old-testament.pdf">Download The Old Testament</a>
 		- <a href="https://github.com/0xR3V/Bibles/raw/main/English/Geneva%20Bible%201599/The%20Old%20Testament%20%26%20The%20New%20Testament/Geneva1599.pdf">Download The Old Testament & The New Testament</a>
 	- [x] King James Version (KJV)
@@ -109,7 +109,10 @@ However, before making any changes, consult first mom's documentation. More info
 	- [ ] Weymouth NT 1912 (Weymouth)
 	- [ ] World English Bible (WEB)
 	- [ ] World Messianic Bible
-	- [ ] Young's Literal Translation (YLT)
+	- [x] Young's Literal Translation (YLT)
+		- <a href="https://github.com/0xR3V/Bibles/raw/main/English/Young%E2%80%99s%20Literal%20Translation%20(YLT)/The%20New%20Testament/YLT-the-new-testament.pdf">Download The New Testament</a>
+		- <a href="https://github.com/0xR3V/Bibles/raw/main/English/Young%E2%80%99s%20Literal%20Translation%20(YLT)/The%20Old%20Testament/YLT-the-old-testament.pdf">Download The Old Testament</a>
+		- <a href="https://github.com/0xR3V/Bibles/raw/main/English/Young%E2%80%99s%20Literal%20Translation%20(YLT)/The%20Old%20Testament%20%26%20The%20New%20Testament/YLT.pdf">Download The Old Testament & The New Testament</a>
 - [ ] Español (Spanish) (ES)
 	- [x] Reina-Valera Antigua (RVA)
 		- <a href="https://github.com/0xR3V/Bibles/raw/main/Espa%C3%B1ol%20(Spanish)/Reina-Valera%20Antigua%20(RVA)/Nuevo%20Testamento%20(The%20New%20Testament)/RVA-nuevo-testamento.pdf">Descarga Nuevo Testamento</a>
