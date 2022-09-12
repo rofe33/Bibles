@@ -99,7 +99,8 @@ However, before making any changes, consult first mom's documentation. More info
 	- [ ] The Emphasized Bible by J. B. Rotherham (Rotherham)
 	- [x] The Living Oracles NT (TLO)
 		- <a href="https://github.com/0xR3V/Bibles/raw/main/English/The%20Living%20Oracles%20NT%20(TLO)/The%20New%20Testament/TLO-the-new-testament.pdf">Download The New Testament</a>
-	- [ ] Twentieth Century New Testament (TCNT)
+	- [x] Twentieth Century New Testament (TCNT)
+		- <a href="https://github.com/0xR3V/Bibles/raw/main/English/Twentieth%20Century%20New%20Testament%20(TCNT)/The%20New%20Testament/TCNT-the-new-testament.pdf">Download The New Testament</a>
 	- [x] Updated King James Version (UKJV)
 		- <a href="https://raw.githubusercontent.com/0xR3V/Bibles/main/English/Updated%20King%20James%20Version%20(UKJV)/The%20New%20Testament/UKJV-the-new-testament.pdf">Download The New Testament</a>
 		- <a href="https://raw.githubusercontent.com/0xR3V/Bibles/main/English/Updated%20King%20James%20Version%20(UKJV)/The%20Old%20Testament/UKJV-the-old-testament.pdf">Download The Old Testament</a>
