@@ -75,7 +75,7 @@ However, before making any changes, consult first mom's documentation. More info
 		- <a href="https://github.com/0xR3V/Bibles/raw/main/English/American%20King%20James%20Version%20(AKJV)/The%20Old%20Testament/AKJV-the-old-testament.pdf">Download The Old Testament</a>
 		- <a href="https://github.com/0xR3V/Bibles/raw/main/English/American%20King%20James%20Version%20(AKJV)/The%20Old%20Testament%20%26%20The%20New%20Testament/AKJV.pdf">Download The Old Testament & The New Testament</a>
 	- [ ] American Standard Version (ASV)
-	- [x] Bible in Basic English (BBE)
+	- [x] Bible in Basic English (BBE) -> [Read it from the terminal](https://github.com/0xR3V/Bible-in-Basic-English_BBE_)
 		- <a href="https://raw.githubusercontent.com/0xR3V/Bibles/main/English/Bible in Basic English (BBE)/The New Testament/BBE-the-new-testament.pdf">Download The New Testament</a>
 		- <a href="https://raw.githubusercontent.com/0xR3V/Bibles/main/English/Bible%20in%20Basic%20English%20(BBE)/The%20Old%20Testament/BBE-the-old-testament.pdf">Download The Old Testament</a>
 		- <a href="https://raw.githubusercontent.com/0xR3V/Bibles/main/English/Bible%20in%20Basic%20English%20(BBE)/The%20Old%20Testament%20%26%20The%20New%20Testament/BBE.pdf">Download The Old Testament & The New Testament</a>
@@ -97,7 +97,7 @@ However, before making any changes, consult first mom's documentation. More info
 		- <a href="https://raw.githubusercontent.com/0xR3V/Bibles/main/English/King%20James%20Version%20(KJV)/The%20Old%20Testament%20%26%20The%20New%20Testament/KJV.pdf">Download The Old Testament & The New Testament</a>
 	- [x] Montgomery New Testament (MNT)
 		- <a href="https://raw.githubusercontent.com/0xR3V/Bibles/main/English/Montgomery%20New%20Testament%20(MNT)/The%20New%20Testament/MNT-the-new-testament.pdf">Download The New Testament</a>
-	- [x] Revised King James New Testament (RKJNT)
+	- [x] Revised King James New Testament (RKJNT) -> [Read it from the terminal](https://github.com/0xR3V/Revised-King-James-New-Testament_RKJNT_)
 		- <a href="https://github.com/0xR3V/Bibles/raw/main/English/Revised%20King%20James%20New%20Testament%20(RKJNT)/The%20New%20Testament/RKJNT-the-new-testament.pdf">Download The New Testament</a>
 	- [ ] The Emphasized Bible by J. B. Rotherham (Roth)
 	- [x] The Living Oracles NT (TLO)
