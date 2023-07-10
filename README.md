@@ -22,14 +22,16 @@ Bibles
 
 ## English
 
-- **A Conservative Version (ACV)**
+- **A Conservative Version (ACV) ([Read it from the
+  terminal!](https://github.com/0xR3V/ACV))**
   - [Download The New
     Testament](https://github.com/0xR3V/Bibles/raw/main/English/A%20Conservative%20Version%20(ACV)/The%20New%20Testament/ACV-the-new-testament.pdf)
   - [Download The Old
     Testament](https://github.com/0xR3V/Bibles/raw/main/English/A%20Conservative%20Version%20(ACV)/The%20Old%20Testament/ACV-the-old-testament.pdf)
   - [Download The Old Testament & The New
     Testament](https://github.com/0xR3V/Bibles/raw/main/English/A%20Conservative%20Version%20(ACV)/The%20Old%20Testament%20%26%20The%20New%20Testament/ACV.pdf)
-- **American King James Version (AKJV)**
+- **American King James Version (AKJV) ([Read it from the
+  terminal!](https://github.com/0xR3V/AKJV))**
   - [Download The New
     Testament](https://github.com/0xR3V/Bibles/raw/main/English/American%20King%20James%20Version%20(AKJV)/The%20New%20Testament/AKJV-the-new-testament.pdf)
   - [Download The Old
@@ -44,7 +46,8 @@ Bibles
     Testament](https://raw.githubusercontent.com/0xR3V/Bibles/main/English/Bible%20in%20Basic%20English%20(BBE)/The%20Old%20Testament/BBE-the-old-testament.pdf)
   - [Download The Old Testament & The New
     Testament](https://raw.githubusercontent.com/0xR3V/Bibles/main/English/Bible%20in%20Basic%20English%20(BBE)/The%20Old%20Testament%20%26%20The%20New%20Testament/BBE.pdf)
-- **Darby Translation (DARBY)**
+- **Darby Translation (DARBY) ([Read it from the
+  terminal!](https://github.com/0xR3V/DARBY))**
   - [Download The New
     Testament](https://github.com/0xR3V/Bibles/raw/main/English/Darby%20Translation%20(DARBY)/The%20New%20Testament/DARBY-the-new-testament.pdf)
   - [Download The Old
