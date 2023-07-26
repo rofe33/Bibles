@@ -8,7 +8,9 @@ pdfmom -k TLO-the-new-testament.mom > TLO-the-new-testament.pdf
 
 ### SHA256 checksums for the files
 ```txt
-2b6689feccfc67beb3acd8f77139122dd7b3220c49199cdcaf8f1a1f6b49eec0 stylesheet.mom
 aaa6e68d4b6a4f645a33392c2efaa1ed25002373b489c68520a2909ac266b93e TLO-the-new-testament.mom
-eebc5e8c939b85e0a1e457f7f4b1f379f74c34fdffed2d4218e58a6f9c843215 TLO-the-new-testament.pdf
+16899e0d6b3327d97f267e8e3768c9f6cacb1d70d6f5e070b831e8b36c8615db TLO-the-new-testament.pdf
+2b6689feccfc67beb3acd8f77139122dd7b3220c49199cdcaf8f1a1f6b49eec0 stylesheet.mom
 ```
+
+<!-- 52ea6cca75fbc0f4a10d3ac6e99e16d1 -->
