@@ -9,6 +9,8 @@ pdfmom -k ACV.mom > ACV.pdf
 ### SHA256 checksums for the files
 ```txt
 cd821f8830896554743f9f350b7086d8bfd5ca2fc39188adcd5153255a55361c ACV.mom
+f51dfade2648c546852c0b33e68713c829305800d1e26545c4575525d1fe2ef6 ACV.pdf
 350a99068c8dbec020ef8d00fbadd7d3f28a0b8e0d9a3f9eb2622251008bfc09 stylesheet.mom
-de530e8ca5f351191e48c7b4a7c158d18faaac80a02de0a9783a0843cf72e4f4 ACV.pdf
 ```
+
+<!-- 52ea6cca75fbc0f4a10d3ac6e99e16d1 -->
