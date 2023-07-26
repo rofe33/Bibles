@@ -9,6 +9,8 @@ pdfmom -k DRA-the-old-testament.mom > DRA-the-old-testament.pdf
 ### SHA256 checksums for the files
 ```txt
 8c3cbf7ee96eab3154b060ae6c66d8236e931ddb70c70ff091ddac764fff83db DRA-the-old-testament.mom
+399bb95f44ba9f6e12b4017da8ce893ed72f95159c860b34e354a496b9951deb DRA-the-old-testament.pdf
 414ff5344d8654c042c4507d2269164082caadadb6f0a11ba6e983bc8752e443 stylesheet.mom
-7dc779c759f81dc0d39af2497229e58939085faa7b44a077dc3f1b35a231d453 DRA-the-old-testament.pdf
 ```
+
+<!-- 52ea6cca75fbc0f4a10d3ac6e99e16d1 -->
