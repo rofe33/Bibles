@@ -9,6 +9,8 @@ pdfmom -k AKJV-the-old-testament.mom > AKJV-the-old-testament.pdf
 ### SHA256 checksums for the files
 ```txt
 9bca60801a711fe100854a48a7ea345c437cd2b4fdf858b5f546a25e426f28ab AKJV-the-old-testament.mom
+eaeefbdaf9d711e48b701b3c0fc1097d97afbe861517049b3bf4c5c139696b61 AKJV-the-old-testament.pdf
 4259c78e8a985628adbbe340797124812b5b7762d3df4e68726ea0c664894364 stylesheet.mom
-97f82262aedf54b75c7c5934a02de9883ff2a8351856f0ac118f8a924006451c AKJV-the-old-testament.pdf
 ```
+
+<!-- 52ea6cca75fbc0f4a10d3ac6e99e16d1 -->
